@@ -1,17 +1,17 @@
 <template>
-  <v-app>
-    <router-view />
-  </v-app>
+  <div>
+    <core-app-bar />
+    <core-footer />
+  </div>
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld";
-
 export default {
   name: "App",
 
   components: {
-    HelloWorld
+    CoreAppBar: () => import("@/components/core/AppBar"),
+    CoreFooter: () => import("@/components/core/Footer")
   },
 
   data: () => ({
