@@ -1,7 +1,6 @@
 <template>
   <div>
     <core-app-bar />
-    <core-footer />
   </div>
 </template>
 
@@ -10,8 +9,7 @@ export default {
   name: "App",
 
   components: {
-    CoreAppBar: () => import("@/components/core/AppBar"),
-    CoreFooter: () => import("@/components/core/Footer")
+    CoreAppBar: () => import("@/components/core/AppBar")
   },
 
   data: () => ({
