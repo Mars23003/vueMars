@@ -65,7 +65,7 @@ export default {
           return pharmacy.properties.county === this.select.city;
         }
         return pharmacy.properties.town === this.select.area;
-      }
+      });
     }
   },
   watch: {
