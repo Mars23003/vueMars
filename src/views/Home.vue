@@ -1,13 +1,18 @@
 <template>
-  <div id="home"></div>
+  <div id="home">
+    <!-- <MaskMap /> -->
+    <ToDoList />
+  </div>
 </template>
 <script>
 // import MaskMap from "../components/maskMap/MaskMap";
+import ToDoList from "../components/todolist/ToDoList";
 
 export default {
   name: "Home",
   components: {
-    // MaskMap
+    // MaskMap,
+    ToDoList
   }
 };
 </script>

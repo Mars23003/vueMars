@@ -1,17 +1,30 @@
 <template>
-  <div id="app">
-    <mask-map />
-    <router-view />
-  </div>
-</template>
+  <v-app id="inspire">
+    <v-navigation-drawer v-model="drawer" app>
+      <!--  -->
+    </v-navigation-drawer>
 
+    <v-app-bar app>
+      <v-app-bar-nav-icon @click="drawer = !drawer"></v-app-bar-nav-icon>
+
+      <v-toolbar-title>Vue</v-toolbar-title>
+    </v-app-bar>
+
+    <v-main>
+      <router-view />
+    </v-main>
+  </v-app>
+</template>
 <script>
-import MaskMap from "./components/maskMap/MaskMap";
+import Home from "./views/Home";
+import AppBar from "./components/core/AppBar";
 
 export default {
   name: "App",
+  data: () => ({ drawer: true }),
   components: {
-    MaskMap
+    Home,
+    AppBar
   }
 };
 </script>
